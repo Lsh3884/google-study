@@ -1,0 +1,133 @@
+@charset "utf-8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+img{
+    display: block;
+    width: 100%;
+
+}
+/* 상단 */
+header{
+    width: 35%;
+    /* background-color: aquamarine; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    text-shadow: 40px 40px 30px rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+header h1{
+    font-size: 85px;
+    font-weight: 800;
+    margin-top: 170px;
+    margin-left: 10%;
+    z-index: 999;
+    position: relative;
+}
+header h1 span{
+    font-size: 75px;
+    font-weight: 200;
+}
+/* 오브젝트 */
+.object{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    animation: obj 1s 0.8s ease-in-out ;
+    animation-fill-mode: both; /*자연스러운 무빙*/
+
+}
+/* 애니메이션*/
+@keyframes obj{
+    0%{
+        opacity: 0;
+        transform: translateX(-500px) scale(0.5);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(30px) scale(1);
+    }
+}
+.border{
+    width: 500px;
+    height: 500px;
+    border: 1px solid #d8d8d8;
+    border-radius: 50%;
+}
+/* 이미지 */
+section{
+    width: 60%;
+    padding: 30px 0;
+    margin-top: 200px;
+    margin-left: 30%;
+}
+.contents{
+    float: left;
+    width: calc(100% / 3);
+}
+.contents a{
+    width: 90%;
+    overflow: hidden;
+    display: block;
+    margin-bottom: 20px;
+}
+.contents a > img{
+    transition: all 0.5s;
+    overflow: hidden;
+}
+.contents a img:hover{
+    transform: scale(1.2);
+    filter: grayscale(100%);
+
+    
+}
+nav{
+    width: 10%;
+    height: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: aqua;
+}
+nav a{
+    display: block;
+    width: 40px;
+    height: 30px;
+    background-color: beige;
+    margin: 50px auto;
+}
+nav a span{
+    width: 100%;
+    height: 5.3px;
+    background-color: #333;
+    display: block;
+    
+}
+nav a span:nth-child(2){
+    margin: 7px 0;
+}
+.fa-house{
+    color: red;
+}
+footer{
+    width: 100%;
+    height: 200px;
+    background-color: rgb(31, 31, 30);
+    display: block;
+    clear: both;
+    color: white;
+}
+footer ul li {
+    float: left;
+    
+    
+}
